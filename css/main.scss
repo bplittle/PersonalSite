@@ -290,6 +290,8 @@ p{
   background-repeat: no-repeat;
   background-size: cover;
 
+  &.spiderman {background-image: url("/assets/Brendan_Spiderman.jpg")}
+
   h1, p {color: white;}
 }
  #section0 img,
