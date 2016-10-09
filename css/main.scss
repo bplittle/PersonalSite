@@ -44,8 +44,16 @@ form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
     margin: 0;
 }
-a{
+a, a:visited, a:active, a:link {
 	text-decoration:none;
+  color: red;
+  cursor: pointer;
+}
+a:hover {
+  color: inherit;
+  // font-weight: bold;
+  color: crimson;
+  text-decoration: none;
 }
 table {
     border-spacing: 0;
@@ -82,11 +90,19 @@ q:before,q:after {
 abbr,acronym { border: 0;
 }
 
+.small-text {font-size: 20px;}
+
+span[contenteditable=true] {
+   background: rgba(255,255,255,0.5); /* transparent bg */
+ }
+
+ em {font-style: italic;}
+
 
 /* Custom CSS
  * --------------------------------------- */
 body{
-	font-family: arial,helvetica;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	color: #333;
 	color: rgba(0,0,0,0.5);
 }
@@ -99,17 +115,52 @@ body{
 h1{
 	font-size: 6em;
 }
+h2 {
+  font-size: 4em;
+}
 p{
 	font-size: 2em;
 }
-.intro p{
-	width: 50%;
-	margin: 0 auto;
-	font-size: 1.5em;
+.intro {
+  h1 {
+    margin-bottom: 100px;
+  }
+
+  p{
+  	width: 50%;
+  	margin: 0 auto;
+  	font-size: 1.5em;
+  }
 }
 .section{
 	text-align:center;
+
+  table {
+    width: 67%;
+    margin: auto;
+    text-align: left;
+  }
+
+  #resume-header, #cover-letter-header {
+    margin-bottom: -25px;
+  }
+
+  #resume-container, #cover-letter-container {
+    max-width: 80%;
+    width: auto;
+    margin: auto;
+    overflow: scroll;
+  }
+  #cover-letter-container {
+    text-align: left;
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-size: 12px;
+    }
+  }
 }
+
 #menu li {
 	display:inline-block;
 	margin: 10px;
@@ -273,11 +324,35 @@ p{
 
 /* Demos Menu
  * --------------------------------------- */
- #demosMenu{
-	position:fixed;
-	bottom: 10px;
-	right:10px;
-	z-index: 999;
+ #faces{
+  position:fixed;
+  bottom: 10px;
+  right:10px;
+  z-index: 999;
+  width: 100px;
+  height: 100px;
+  background-image: url("/assets/B_Face.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+
+  &.spiderman {
+    background-image: url("/assets/spider-man-head.png");
+  }
+ //
+ //  &.transitioning {
+ //    -webkit-animation:spin 4s linear infinite;
+ //    -moz-animation:spin 4s linear infinite;
+ //    animation:spin 4s linear infinite;
+ //    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+ //    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+ //    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+ //  }
+ //
+ //  &.small {
+ //
+ //  }
  }
 
 
@@ -290,9 +365,7 @@ p{
   background-repeat: no-repeat;
   background-size: cover;
 
-  &.spiderman {background-image: url("/assets/Brendan_Spiderman.jpg")}
-
-  h1, p {color: white;}
+  h1, h2, p {color: white;}
 }
  #section0 img,
  #section1 img{
@@ -318,4 +391,23 @@ p{
  	z-index: 99;
  	right: 149px;
  	top: 9px;
+ }
+
+ #peter-parker::after {content: "Personal Hobbies";}
+ #origin-story::after {content: "How I Got Here";}
+ #super-powers::after {content: "Technical Strengths";}
+ #daily-bugle::after {content: "Past Work"}
+
+ .spiderman {
+   #peter-parker::after {content: "Peter Parker";}
+   #origin-story::after {content: "Origin Story";}
+   #super-powers::after {content: "Super Powers";}
+   #daily-bugle::after {content: "Daily Bugle Headlines"}
+
+   #section0 {
+     background-image: url("/assets/Brendan_Spiderman.jpg")
+   }
+   h1, h2 {
+     font-family: 'Bangers', cursive;
+   }
  }
