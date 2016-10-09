@@ -112,14 +112,30 @@ body{
 	width: 960px;
 	position: relative;
 }
-h1{
-	font-size: 6em;
-}
-h2 {
-  font-size: 4em;
-}
-p{
-	font-size: 2em;
+h1{font-size: 6em;}
+h2 {  font-size: 4em;}
+p{	font-size: 2em;}
+
+@media only screen and (max-width: 500px) {
+  h1{font-size: 3em;}
+  h2 {  font-size: 2em;}
+  p{	font-size: 1em;}
+
+  #menu li, #menu li.active {
+    margin: 5px;
+    a {
+      padding: 6px 14px;
+      display: block;
+      font-size: 0.75em;
+    }
+  }
+
+  .section {
+    .intro {
+      h1 { margin-bottom: 0px;}
+      p{font-size: 0.75em;}
+    }
+  }
 }
 .intro {
   h1 {
@@ -150,6 +166,22 @@ p{
     width: auto;
     margin: auto;
     overflow: scroll;
+
+    iframe {
+      height: 1100px;
+      width: 850px;
+    }
+  }
+
+  @media only screen and (max-width: 500px)  {
+    #resume-header, #cover-letter-header {
+      margin-top: 150px;
+      margin-bottom: 0px;
+    }
+
+    iframe {
+      display: none;
+    }
   }
   #cover-letter-container {
     text-align: left;
@@ -340,7 +372,8 @@ p{
   &.spiderman {
     background-image: url("/assets/spider-man-head.png");
   }
- //
+
+   //
  //  &.transitioning {
  //    -webkit-animation:spin 4s linear infinite;
  //    -moz-animation:spin 4s linear infinite;
@@ -353,6 +386,9 @@ p{
  //  &.small {
  //
  //  }
+ }
+ @media only screen and (max-width: 500px) {
+  #faces {width: 50px;}
  }
 
 
