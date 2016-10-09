@@ -28,4 +28,4 @@ hightlighter: null
 # Build settings
 markdown: kramdown
 theme: minima
-exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', bin]
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'bin']
