@@ -98,6 +98,8 @@ span[contenteditable=true] {
 
  em {font-style: italic;}
 
+ .intro p.center-text {text-align: center;}
+
 
 /* Custom CSS
  * --------------------------------------- */
@@ -120,6 +122,7 @@ p{	font-size: 2em;}
   h1{font-size: 3em;}
   h2 {  font-size: 2em;}
   p{	font-size: 1em;}
+  .section .intro ul {font-size: 0.75em;}
 
   #menu li, #menu li.active {
     margin: 5px;
@@ -189,6 +192,17 @@ p{	font-size: 2em;}
       white-space: pre-wrap;
       word-wrap: break-word;
       font-size: 12px;
+      padding-right: 20px;
+
+      ::-webkit-scrollbar { // dislay the scrollabr
+          -webkit-appearance: none;
+          width: 7px;
+      }
+      ::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          background-color: rgba(0,0,0,.5);
+          -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+      }
     }
   }
 }
@@ -417,10 +431,18 @@ p{	font-size: 2em;}
  	position: absolute;
  	margin-left: -420px;
  }
- .intro p{
+ .intro p {
  	width: 50%;
  	margin: 0 auto;
  	font-size: 1.5em;
+  text-align: left;
+ }
+ .intro ul {
+   width: 50%;
+   margin: 0 auto;
+   list-style-type: circle;
+   text-align: left;
+   font-size: 1.25em;
  }
  .twitter-share-button{
  	position: absolute;
@@ -432,12 +454,14 @@ p{	font-size: 2em;}
  #peter-parker::after {content: "Personal Hobbies";}
  #origin-story::after {content: "How I Got Here";}
  #super-powers::after {content: "Technical Strengths";}
+ #personal-strengths::after {content: "Personal Strengths";}
  #daily-bugle::after {content: "Past Work"}
 
  .spiderman {
    #peter-parker::after {content: "Peter Parker";}
    #origin-story::after {content: "Origin Story";}
-   #super-powers::after {content: "Super Powers";}
+   #super-powers::after {content: "Super Powers - ch 1";}
+   #personal-strengths::after {content: "Super Powers - ch 2";}
    #daily-bugle::after {content: "Daily Bugle Headlines"}
 
    #section0 {
