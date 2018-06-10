@@ -1,2 +1,2 @@
 # PersonalSite
-my personal site
+`bundle exec jekyll serve`
