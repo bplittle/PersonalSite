@@ -5,8 +5,8 @@ layout: default
 <ul id="menu">
   <li data-menuanchor="brendan"><a href="#brendan">Home</a></li>
 	<li data-menuanchor="about-me"><a href="#about-me">About Me</a></li>
-  <li data-menuanchor="past-work"><a href="#past-work">Past Work</a></li>
-	<li data-menuanchor="cv"><a href="#cv">Resume</a></li>
+  <li data-menuanchor="resume"><a href="#resume">Resume</a></li>
+	<li data-menuanchor="past-work"><a href="#past-work">Past Work</a></li>
   <li><a href="https://ca.linkedin.com/in/littlebrendan" target="_blank"><i class="fa fa-linkedin"></i></a></li>
   <li><a href="http://www.github.com/bplittle" target="_blank"><i class="fa fa-github"></i></a></li>
 </ul>
@@ -50,6 +50,18 @@ layout: default
       </div>
     </div>
 	</div>
+
+  <div class="section" id="section3">
+    <div class="slide">
+      <div class="intro" id="resume-section">
+        <h1 id="resume-header">Resum&eacute;</h1>
+        <p class="center-text"><a target="_blank" href="https://resume.creddle.io/resume/2bjjzujmibw">Resume URL</a>(Print as PDF to save)</p>
+        <div id="resume-container">
+          <iframe src="https://resume.creddle.io/embed/2bjjzujmibw" seamless></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
 	<div class="section" id="section2">
     <div class="slide">
@@ -106,7 +118,7 @@ layout: default
 			</div>
 		</div>
     <div class="slide">
-			<div class="intro">
+			<div>
 				<h2><a href="https://chrome.google.com/webstore/detail/soundcloud-stream-filter/jcjbcckegeopjjphledaneonikjfpkmi" target="_blank">Soundcloud Filter<br/> Chrome Extension</a></h2>
         <h3><b>Hobby Project to clean up my (and others') overwhelming Soundcloud Feeds</b></h3>
         <ul>
@@ -118,17 +130,6 @@ layout: default
 		</div>
 	</div>
 
-	<div class="section" id="section3">
-    <div class="slide">
-      <div class="intro" id="resume-section">
-        <h1 id="resume-header">Resum&eacute;</h1>
-        <p class="center-text"><a target="_blank" href="https://resume.creddle.io/resume/2bjjzujmibw">Resume URL</a>(Print as PDF to save)</p>
-        <div id="resume-container">
-          <iframe src="https://resume.creddle.io/embed/2bjjzujmibw" seamless></iframe>
-        </div>
-      </div>
-    </div>
-	</div>
 </div>
 
 <!-- <div id="faces"/> -->
@@ -137,7 +138,7 @@ layout: default
   $(document).ready(function() {
     $('#fullpage').fullpage({
       sectionsColor: ['whitesmoke', '#bcd4e6', '#7BAABE', 'whitesmoke'],
-      anchors: ['brendan','about-me', 'past-work', 'cv'],
+      anchors: ['brendan','about-me', 'resume', 'past-work'],
       menu: '#menu',
       scrollingSpeed: 1000,
       afterRender: function(){
