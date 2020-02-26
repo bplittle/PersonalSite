@@ -370,7 +370,7 @@ p{	font-size: 2em;}
 
 /* Demos Menu
  * --------------------------------------- */
- #faces{
+ #faces {
   position:fixed;
   bottom: 10px;
   right:10px;
@@ -387,24 +387,25 @@ p{	font-size: 2em;}
     background-image: url("/assets/B_Face.png");
   }
 
-   //
- //  &.transitioning {
- //    -webkit-animation:spin 4s linear infinite;
- //    -moz-animation:spin 4s linear infinite;
- //    animation:spin 4s linear infinite;
- //    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
- //    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
- //    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
- //  }
- //
- //  &.small {
- //
- //  }
- }
- @media only screen and (max-width: 500px) {
-  #faces {width: 50px;}
- }
 
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+  &:hover {
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+  }
+
+  @media only screen and (min-width: 700px) {
+    width: 150px;
+    height: 150px;
+  }
+ }
 
  /* Sections
  		 * --------------------------------------- */
