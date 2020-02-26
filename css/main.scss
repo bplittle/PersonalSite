@@ -377,14 +377,14 @@ p{	font-size: 2em;}
   z-index: 999;
   width: 100px;
   height: 100px;
-  background-image: url("/assets/B_Face.png");
+  background-image: url("/assets/spider-man-head.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
 
   &.spiderman {
-    background-image: url("/assets/spider-man-head.png");
+    background-image: url("/assets/B_Face.png");
   }
 
    //
@@ -460,6 +460,11 @@ p{	font-size: 2em;}
      top: 50%;
      left: 50%;
      transform: translateY(-50%) translateX(-50%);
+     width: 100%;
+
+     a {
+       font-size: 0.5em;
+     }
    }
  }
  .twitter-share-button{
